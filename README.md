@@ -104,6 +104,27 @@ $displayQRCodeAsBase64 = GenerateQrCode::fromArray([
 ```
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+#### QR Code Image Customization
+
+You can render the tags as QR code image easily
+
+
+```php
+use Salla\ZATCA\GenerateQrCode;
+use Salla\ZATCA\Tags\InvoiceDate;
+use Salla\ZATCA\Tags\InvoiceTaxAmount;
+use Salla\ZATCA\Tags\InvoiceTotalAmount;
+use Salla\ZATCA\Tags\Seller;
+use Salla\ZATCA\Tags\TaxNumber;
+
+// data:image/png;base64, .........
+$displayQRCodeAsBase64 = GenerateQrCode::fromArray([
+...
+])->render(['scale' => 3]);
+```
+
+For more information about the list of options visit [QROption](https://github.com/chillerlan/php-qrcode)
+
 
 ## Read The QR-Code
 
